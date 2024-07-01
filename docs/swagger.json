@@ -1,0 +1,60 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "description": "Crypto-to-Fiat and Fiat-to-Crypto converter",
+        "title": "C2F F2C Converter",
+        "contact": {},
+        "version": "1.0"
+    },
+    "host": "localhost:3000",
+    "paths": {
+        "/convert": {
+            "get": {
+                "description": "convert fiat to crypto or vise versa",
+                "tags": [
+                    "converter"
+                ],
+                "summary": "Convert given C2F or F2C",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "example": "BTC",
+                        "description": "From Currency",
+                        "name": "from",
+                        "in": "query",
+                        "required": true
+                    },
+                    {
+                        "type": "string",
+                        "example": "USD",
+                        "description": "To Currency",
+                        "name": "to",
+                        "in": "query",
+                        "required": true
+                    },
+                    {
+                        "type": "number",
+                        "example": 3.1,
+                        "description": "From Currency",
+                        "name": "amount",
+                        "in": "query"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "3.4",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "400": {
+                        "description": "invalid conversion for pair: CNY/EUR",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

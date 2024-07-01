@@ -1,0 +1,7 @@
+httpport: ":3000"
+dbusername: postgres
+dbpassword: "123"
+dbport: "5432"
+dbhost: localhost
+dbname: rates
+exchangeapikey: 24b9eca8e2-288c93e941-sfsi4w
