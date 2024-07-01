@@ -15,3 +15,9 @@ dbhost: localhost
 dbname: rates
 exchangeapikey: <api_key>
 ```
+
+### Database required
+
+```sql
+INSERT INTO public.currency(name, symbol, currency_type, is_available)VALUES ('BITCOIN', 'BTC', 'CRYPTO', true);
+```
